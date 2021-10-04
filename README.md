@@ -1,3 +1,5 @@
+Repro for https://github.com/superfaceai/one-sdk-js/issues/146
+
 ## Steps to reproduce
 
 ### Initial setup

@@ -1,0 +1,312 @@
+{
+  "kind": "ProfileDocument",
+  "header": {
+    "kind": "ProfileHeader",
+    "scope": "weather",
+    "name": "current-city",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "patch": 1
+    },
+    "location": {
+      "line": 1,
+      "column": 1
+    },
+    "span": {
+      "start": 0,
+      "end": 113
+    },
+    "title": "Current Weather In City",
+    "description": "Get current weather for the city"
+  },
+  "definitions": [
+    {
+      "kind": "UseCaseDefinition",
+      "useCaseName": "GetCurrentWeatherInCity",
+      "safety": "safe",
+      "input": {
+        "kind": "UseCaseSlotDefinition",
+        "type": {
+          "kind": "ObjectDefinition",
+          "fields": [
+            {
+              "kind": "FieldDefinition",
+              "fieldName": "city",
+              "required": true,
+              "type": {
+                "kind": "NonNullDefinition",
+                "type": {
+                  "kind": "PrimitiveTypeName",
+                  "name": "string",
+                  "span": {
+                    "start": 393,
+                    "end": 399
+                  },
+                  "location": {
+                    "line": 19,
+                    "column": 11
+                  }
+                },
+                "location": {
+                  "line": 19,
+                  "column": 11
+                },
+                "span": {
+                  "start": 393,
+                  "end": 400
+                }
+              },
+              "location": {
+                "line": 15,
+                "column": 5
+              },
+              "span": {
+                "start": 253,
+                "end": 400
+              },
+              "title": "city",
+              "description": "Name of the city including state and country, e.g.: \"Prague, Czech Republic\" or \"New York City, NY, USA\""
+            },
+            {
+              "kind": "FieldDefinition",
+              "fieldName": "units",
+              "required": false,
+              "type": {
+                "kind": "EnumDefinition",
+                "values": [
+                  {
+                    "kind": "EnumValue",
+                    "value": "C",
+                    "location": {
+                      "line": 26,
+                      "column": 17
+                    },
+                    "span": {
+                      "start": 541,
+                      "end": 542
+                    }
+                  },
+                  {
+                    "kind": "EnumValue",
+                    "value": "F",
+                    "location": {
+                      "line": 26,
+                      "column": 20
+                    },
+                    "span": {
+                      "start": 544,
+                      "end": 545
+                    }
+                  },
+                  {
+                    "kind": "EnumValue",
+                    "value": "K",
+                    "location": {
+                      "line": 26,
+                      "column": 23
+                    },
+                    "span": {
+                      "start": 547,
+                      "end": 548
+                    }
+                  }
+                ],
+                "location": {
+                  "line": 26,
+                  "column": 11
+                },
+                "span": {
+                  "start": 535,
+                  "end": 549
+                }
+              },
+              "location": {
+                "line": 21,
+                "column": 5
+              },
+              "span": {
+                "start": 410,
+                "end": 549
+              },
+              "title": "units",
+              "description": "Units used to represent temperature - Fahrenheit, Celsius, Kelvin\nCelsius by default"
+            }
+          ],
+          "location": {
+            "line": 14,
+            "column": 9
+          },
+          "span": {
+            "start": 247,
+            "end": 553
+          }
+        },
+        "location": {
+          "line": 14,
+          "column": 3
+        },
+        "span": {
+          "start": 241,
+          "end": 553
+        }
+      },
+      "result": {
+        "kind": "UseCaseSlotDefinition",
+        "type": {
+          "kind": "ObjectDefinition",
+          "fields": [
+            {
+              "kind": "FieldDefinition",
+              "fieldName": "temperature",
+              "required": true,
+              "type": {
+                "kind": "NonNullDefinition",
+                "type": {
+                  "kind": "PrimitiveTypeName",
+                  "name": "number",
+                  "span": {
+                    "start": 650,
+                    "end": 656
+                  },
+                  "location": {
+                    "line": 34,
+                    "column": 18
+                  }
+                },
+                "location": {
+                  "line": 34,
+                  "column": 18
+                },
+                "span": {
+                  "start": 650,
+                  "end": 657
+                }
+              },
+              "location": {
+                "line": 30,
+                "column": 5
+              },
+              "span": {
+                "start": 570,
+                "end": 657
+              },
+              "title": "temperature",
+              "description": "Temperature in specified units"
+            },
+            {
+              "kind": "FieldDefinition",
+              "fieldName": "feelsLike",
+              "required": false,
+              "type": {
+                "kind": "NonNullDefinition",
+                "type": {
+                  "kind": "PrimitiveTypeName",
+                  "name": "number",
+                  "span": {
+                    "start": 753,
+                    "end": 759
+                  },
+                  "location": {
+                    "line": 40,
+                    "column": 15
+                  }
+                },
+                "location": {
+                  "line": 40,
+                  "column": 15
+                },
+                "span": {
+                  "start": 753,
+                  "end": 760
+                }
+              },
+              "location": {
+                "line": 36,
+                "column": 5
+              },
+              "span": {
+                "start": 667,
+                "end": 760
+              },
+              "title": "feelsLike",
+              "description": "Subjective temperature in specified units"
+            },
+            {
+              "kind": "FieldDefinition",
+              "fieldName": "description",
+              "required": false,
+              "type": {
+                "kind": "NonNullDefinition",
+                "type": {
+                  "kind": "PrimitiveTypeName",
+                  "name": "string",
+                  "span": {
+                    "start": 868,
+                    "end": 874
+                  },
+                  "location": {
+                    "line": 46,
+                    "column": 17
+                  }
+                },
+                "location": {
+                  "line": 46,
+                  "column": 17
+                },
+                "span": {
+                  "start": 868,
+                  "end": 875
+                }
+              },
+              "location": {
+                "line": 42,
+                "column": 5
+              },
+              "span": {
+                "start": 770,
+                "end": 875
+              },
+              "title": "description",
+              "description": "Text description of weather, e.g. \"Partly cloudy\""
+            }
+          ],
+          "location": {
+            "line": 29,
+            "column": 10
+          },
+          "span": {
+            "start": 564,
+            "end": 879
+          }
+        },
+        "location": {
+          "line": 29,
+          "column": 3
+        },
+        "span": {
+          "start": 557,
+          "end": 879
+        }
+      },
+      "location": {
+        "line": 9,
+        "column": 1
+      },
+      "span": {
+        "start": 115,
+        "end": 881
+      },
+      "title": "Get Current Weather In City",
+      "description": "Get current weather in the city in chosen units."
+    }
+  ],
+  "location": {
+    "line": 1,
+    "column": 1
+  },
+  "span": {
+    "start": 0,
+    "end": 881
+  }
+}
